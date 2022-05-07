@@ -34,7 +34,7 @@ export class AssetDetailComponent {
       )
     );
 
-    // Intializes the card content based off the endpoint from coin cap
+    // Intializes the card content based off the endpoint from CoinCapService
     asset$.subscribe( (data: AssetFromApi) => {
         this.asset = data.data;
         
@@ -51,7 +51,7 @@ export class AssetDetailComponent {
           {name: "Volume Weighted Average Price (in past 24 hours)", content: this.usdTransform(this.asset.vwap24Hr)}
          ]
 
-        // We want to force a recalculation with the new info in case this is already loaded
+        // We want to force a recalculation with the new info in case this is already loaded from another Asset
         this.calculateUSD(this.amountOfAsset);
       }
     )

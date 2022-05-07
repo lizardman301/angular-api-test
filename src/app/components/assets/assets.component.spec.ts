@@ -27,5 +27,4 @@ describe('AssetsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

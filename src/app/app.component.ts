@@ -11,4 +11,7 @@ export class AppComponent {
   public active = "1";
 
   constructor(public route: ActivatedRoute){};
+
+  // The app component is just use as the "home" or "parent" component for the rest of the app
+  // NavBar and routerOutlet exists here and will display the other components
 }

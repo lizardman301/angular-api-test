@@ -89,14 +89,4 @@ export class AssetLineChartComponent{
 
     }
   }
-
-  // events
-  public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-
-  }
-
-  public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-
-  }
-
 }
