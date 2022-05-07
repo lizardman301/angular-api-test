@@ -1,5 +1,9 @@
 # AngularApiTest
 
+This is a test project to demonstrate some front end software development. It uses the [CoinCap API](https://docs.coincap.io/) and displays data on the various crypto currencies. It makes use of [Bootstrap](https://ng-bootstrap.github.io/#/home) and [ng2-charts](https://valor-software.com/ng2-charts/) for displaying the detail in a more pleasing way.
+
+When you start the local server, click on the "About" nav tab for more information.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
 ## Development server
