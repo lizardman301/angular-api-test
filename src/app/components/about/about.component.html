@@ -1,0 +1,60 @@
+<div>
+    <h2>About</h2>
+    <p>
+        This app is meant to serve as a technical interview project to show my web development skills. <br>
+
+        To use this app, click on the "All Assets" tab and explore! <br>
+        Search for any coin provided from the coin cap api and click on it for more details. <br>
+        You can close out of the details by pressing the "X" on the top right of the card, or by pressing the Title on the top left. <br>
+        There is plenty of room for expansion if desired (more nav feature, more graphs, more options in the core), but this should be a good summary of the basics. <br>
+
+    </p>
+
+    <h2>Things to improve on</h2>
+
+
+        Unfortunately, I wasn't able to dedicate as much time as I would've wanted to for this project so I missed a few things.
+
+    <p>
+        1. I would've loved to use more of the endpoints from the api. I only was able to explore 
+        the 'assets' endpoint and its two children endpoints. If i had more time, I would like to
+         have fully implemented the markets and exchanges endpoints as their own tabs and tables.
+    </p>
+
+    <p>
+        2. Unit testing on an app like this could've been done better. Most of the tests are just from the initial generation.
+        Testing a service with an api isn't really feasible in a unit testing environment, and most of the other
+        component functions to test are relatively simple ones.
+    </p>
+
+    <p>
+        3. There is a general sloppiness to some of the components. Lots of troubleshooting had to be done and as such there
+         is a lot of things that could've been done better. The general approach to handling calls to the API was patched last second
+         due to it returning with the data I wanted in another object with a timestap attached to that data.  I could've used the async 
+         pipe much more frequently in the component html files if this wasn't the case. Instead I am subscribing to the observer in the backend,
+         which is not ideal. That and the method for the details card is also not good.
+    </p>
+
+    <p>
+        4. A lot of the UI elements are generally lifted from bootcamp's example page. I would've rather taken more time to customize 
+        them so that they looked more distinct from the general bootcamp style. Right now the page looks fairly empty due to this lack of
+        customization, but I wanted to focus on more of the technical aspects (making the data go to where it needed to go) rather than worry
+        about presentation. This is especially true when attempting to use the UI on mobile as the mobile views need heavy work.
+    </p>
+
+    <p>
+        5. The table has a search feature but not a feature to sort based on a column. Simply ran out of time on this one, but it should be doable.
+        Same with adding pagination to the table. Easy enough feature, but simply lack of time.
+    </p>
+    
+    <h2>Acknowledgements</h2>
+    <p>
+        UI and CSS are all from bootcamp https://ng-bootstrap.github.io/#/home. Had many great examples that were used in this project.
+    </p>
+    <p>
+        API Data from CoinCap, specifically: https://docs.coincap.io/
+    </p>
+    <p>
+        LineCharts made with ng2-charts and chart.js https://valor-software.com/ng2-charts/ 
+    </p>
+</div>

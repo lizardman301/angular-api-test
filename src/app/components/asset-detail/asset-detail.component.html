@@ -1,0 +1,34 @@
+<div *ngIf="(asset)" class="card text-white bg-info mb-3 mx-auto" style="width: 50%;">
+    <div class="card-header row">
+        <h3 class="card-title text-center col-11">{{asset.name}} Details</h3>
+        <h1 class="close col-1 clickable" [routerLink]="['']" aria-hidden="true">&times;</h1>
+    </div>
+
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p *ngFor="let row of cardContent">
+                        {{row.name}}: <span *ngIf="isEmpty(row.content)">N/A</span>{{row.content}}
+                    </p>
+                </div>
+
+                <div class="col">
+                    <h4>Convert Assets to a USD value</h4>
+                    <div class="mb-3 row">
+                        <label class="col-xs-3 col-sm-auto col-form-label"><h5>Amount of asset:</h5></label>
+                        <div class="col-xs-3 col-sm-auto">
+                            <input #numOfAsset type="number" name="numOfAsset" min="0" (change)="calculateUSD(numOfAsset.value)">
+                        </div>
+                    </div>
+                    <h5>Total price in USD:</h5>
+                    <div><h5>{{dollarAmountOfAsset | currency: 'USD':'$':'1.2-5'}}</h5></div>
+                </div>
+                <div class="col">
+                    <h4>Price History from Last Year</h4>
+                    <app-asset-line-chart [assetId]="asset.id"></app-asset-line-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

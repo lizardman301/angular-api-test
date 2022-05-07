@@ -1,0 +1,29 @@
+<form>
+    <div class="mb-3 row">
+      <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label">Filter assets:</label>
+      <div class="col-xs-3 col-sm-auto">
+        <input id="table-filtering-search" class="form-control" type="text" [formControl]="filter">
+      </div>
+    </div>
+</form>
+
+<table class ="table table-hover table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Name</th>
+            <th scope="col">Id</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Price (Usd)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="clickable" *ngFor="let asset of assets$ | async" (click)="assetDetail(asset)">
+            <th scope="row">{{asset.rank}}</th>
+            <td>{{asset.name}}</td>
+            <td>{{asset.id}}</td>
+            <td>{{asset.symbol}}</td>
+            <td>{{asset.priceUsd | currency: 'USD':'$':'1.2-5'}}</td>
+        </tr>
+    </tbody>
+</table>
