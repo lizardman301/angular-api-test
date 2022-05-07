@@ -1,5 +1,5 @@
+  // Class to define types for asset from CoinCap api
 export type Asset = {
-    // Class to define types for asset from Coin-Cap api
     id: string;
     rank: string;
     symbol: string;
@@ -13,6 +13,7 @@ export type Asset = {
     vwap24Hr: string;
 }
 
+// CoinCap api returns the data nested in another object. These two just handle that
 export type AllAssetsFromApi = {
     data: Asset[];
     timestamp: number;

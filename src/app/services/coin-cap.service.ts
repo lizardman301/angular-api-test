@@ -46,20 +46,22 @@ export class CoinCapService {
     return this.http.get<AssetHistoryFromApi>(this.coinCapAssetsUrl + id + "/history?interval=d1");
   }
 
-  // Returns an array of all rates from Coin Cap.
-  getAllRates(): Observable<Rate[]> {
-    return this.http.get<Rate[]>(this.coinCapRatesUrl);
-  }
-  // Returns the rate data of the provided asset id. Returns error message otherwise
-  getRate(id: string): Observable<Rate> {
-    return this.http.get<Rate>(this.coinCapRatesUrl + id);
-  }
+  // The below methods were created but never used. As such I have commented them out for now
 
-  // Returns an array of all exchanges from Coin Cap
-  getAllExchanges(): Observable<Exchange[]> {
-    return this.http.get<Exchange[]>(this.coinCapExchangesUrl);
-  }
-  getExchange(id: string): Observable<Exchange> {
-    return this.http.get<Exchange>(this.coinCapExchangesUrl + id);
-  }
+  // // Returns an array of all rates from Coin Cap.
+  // getAllRates(): Observable<Rate[]> {
+  //   return this.http.get<Rate[]>(this.coinCapRatesUrl);
+  // }
+  // // Returns the rate data of the provided asset id. Returns error message otherwise
+  // getRate(id: string): Observable<Rate> {
+  //   return this.http.get<Rate>(this.coinCapRatesUrl + id);
+  // }
+
+  // // Returns an array of all exchanges from Coin Cap
+  // getAllExchanges(): Observable<Exchange[]> {
+  //   return this.http.get<Exchange[]>(this.coinCapExchangesUrl);
+  // }
+  // getExchange(id: string): Observable<Exchange> {
+  //   return this.http.get<Exchange>(this.coinCapExchangesUrl + id);
+  // }
 }
